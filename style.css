@@ -1,0 +1,228 @@
+/* Isso é um comentário CSS. O 'body' é o seletor para o corpo inteiro do site */
+body {
+    font-family: Arial, sans-serif; /* Define uma fonte mais limpa */
+    margin: 0;                     /* Remove a margem padrão do navegador */
+    padding: 0;                    /* Remove o preenchimento padrão */
+    background-color: #f4f4f4;     /* Um cinza bem claro para o fundo */
+    color: #333;                   /* Cor do texto principal (cinza escuro) */
+}
+
+/* Estilizando o cabeçalho */
+header {
+    background-color: #2c3e50;     /* Um azul-escuro/cinza para o cabeçalho */
+    color: white;                  /* Cor do texto no cabeçalho */
+    padding: 20px;                 /* Espaçamento interno */
+    text-align: center;            /* Centraliza o texto */
+}
+
+header h1 {
+    margin: 0;                     /* Remove a margem do título */
+    font-size: 2.5em;              /* Tamanho da fonte do nome */
+}
+
+/* Estilizando a barra de navegação */
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: white;                  /* Cor dos links */
+    text-decoration: none;         /* Remove o sublinhado */
+    padding: 10px 15px;            /* Espaçamento nos links */
+    font-weight: bold;
+}
+
+/* Efeito ao passar o mouse sobre o link */
+nav a:hover {
+    background-color: #3498db;     /* Um azul mais claro ao passar o mouse */
+    border-radius: 5px;            /* Borda arredondada */
+}
+
+/* Estilizando o conteúdo principal */
+main {
+    max-width: 900px;              /* Limita a largura do conteúdo */
+    margin: 20px auto;             /* Centraliza o conteúdo principal na página */
+    padding: 20px;                 /* Espaçamento interno */
+    background-color: white;       /* Fundo branco para o conteúdo */
+    border-radius: 8px;            /* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+/* Estilizando o rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    color: #777;
+    font-size: 0.9em;
+}
+/*
+================================
+Estilo do Botão de Projeto
+================================
+*/
+
+.link-projeto {
+    display: inline-block;
+    background-color: #3498db;  /* O mesmo azul que usamos no :hover do menu */
+    color: white;               /* Texto branco */
+    padding: 10px 15px;         /* Espaçamento interno */
+    text-decoration: none;      /* Remove o sublinhado */
+    border-radius: 5px;         /* Bordas arredondadas */
+    font-weight: bold;
+    margin-top: 10px;           /* Um espaço acima do botão */
+}
+
+/* Efeito ao passar o mouse */
+.link-projeto:hover {
+    background-color: #2980b9;  /* Um azul um pouco mais escuro */
+}
+/*
+================================
+Estilos da Página de Contato
+================================
+*/
+
+.lista-contato {
+    list-style-type: none; /* Remove os marcadores (bolinhas) */
+    padding-left: 0;       /* Remove o preenchimento padrão da lista */
+}
+
+.lista-contato li {
+    font-size: 1.1em;      /* Aumenta um pouco a fonte */
+    margin-bottom: 15px;   /* Espaço entre os itens */
+}
+
+/* Deixa o "Email:", "Telefone:" etc. em destaque */
+.lista-contato strong {
+    display: inline-block;
+    min-width: 120px; /* Define uma largura mínima para alinhar os textos */
+    color: #333;
+}
+
+.lista-contato a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.lista-contato a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+/*
+================================
+Estilos da Nova Página Inicial (Hero & Destaques)
+================================
+*/
+
+/* Remove a sombra e o fundo branco do <main> SÓ na página inicial */
+/* Usamos :has() para checar se o main contém a classe .hero */
+/* ATENÇÃO: Se isso não funcionar, podemos trocar por uma classe no body */
+main:has(.hero) {
+    background-color: transparent;
+    box-shadow: none;
+    max-width: 1000px; /* Um pouco mais largo */
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h2 {
+    font-size: 2.2em; /* Título maior */
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto 30px auto; /* Centraliza e adiciona espaço */
+}
+
+/* --- Estilo dos Botões de Ação (CTA) --- */
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espaço entre os botões */
+}
+
+/* Botão Primário (Projetos) */
+.cta-primary {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.cta-primary:hover {
+    background-color: #2980b9;
+}
+
+/* Botão Secundário (Contato) */
+.cta-secondary {
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.cta-secondary:hover {
+    background-color: #e9e9e9;
+}
+
+
+/* --- Seção de Destaques / Foco --- */
+.destaques {
+    margin-top: 40px;
+    padding: 30px;
+    background-color: white; /* Fundo branco para esta seção */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra suave de volta */
+}
+
+.destaques h3 {
+    text-align: center;
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.foco-container {
+    display: flex;
+    justify-content: space-around; /* Distribui os itens */
+    gap: 20px;
+}
+
+.foco-item {
+    flex-basis: 30%; /* Cada item ocupa cerca de 30% */
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.foco-item h4 {
+    font-size: 1.2em;
+    color: #3498db;
+    margin: 0 0 10px 0;
+}
+
+.foco-item p {
+    font-size: 1em;
+    color: #555;
+    margin: 0;
+}
